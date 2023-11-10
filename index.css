@@ -1,0 +1,369 @@
+/* ======== Import de 2 fuentes, Roboto y Poppins ===========*/
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&family=Roboto:wght@500;700;900&display=swap');
+
+/* ---- Estilos globales: Eliminar todos los bordes, relleno por defecto en 0, Elimina todos los margin,
+border-box, el ancho y la altura del elemento incluyen el contenido, el relleno y el borde, lo que facilita el control del tamaño total de un elemento. -----*/
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*-----Transcición suave al desplazar  ----- */
+html {
+  scroll-behavior: smooth;
+}
+/* ---- Familia por defecto "poppins" y una altura del body del total del viewport ----- */
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+/*----Fuente "roboto" para todos los "h" de la web -----*/
+h1,h2,h3,h4,h5{
+
+font-family: 'Roboto', sans-serif;
+}
+/*---- Quitar la decoracion a los li ----*/
+li {
+  list-style: none;
+}
+/**/
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+}
+a:hover {
+  color: #dcd473;
+}
+
+/* HEADER */
+/*----fijar su posición en la parte superior, aplicar un color de fondo con opacidad y agregar un filtro de desenfoque.----*/
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color:  rgba(218, 213, 213,0.7) ;
+  backdrop-filter: blur(2px);
+}
+/*---- div con el logo y el nombre del sitio ---*/
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* --- tamaño maximo de la imagen y su border radius  */
+.logo img{
+  max-width: 10%;
+  border-radius: 50%;
+}
+/* Estableces la altura, el ancho máximo y otros estilos para la barra de navegación.*/
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+/* tamaño de la fuente y peso*/
+.navbar .logo a{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+/*--- ----*/
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+/* Aquí, estás proporcionando estilos para un botón de menú desplegable que se muestra en pantallas más pequeñas.*/
+.navbar .toggle_btn {
+  color: #000;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: #f4db03;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+/* DROPDOWN MENU */
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown_menu.open {
+  height: 240px;
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* HERO*/
+section#hero {
+  background-color: #000;
+  background-image: url(img/taconHero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  color: #000;
+}
+
+.products img {
+  max-width: 80%;
+  border-radius: 1rem;
+}
+
+.products {
+  padding-block: 2rem;
+  padding-inline: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  background-color: #f1d8ae;
+
+}
+.product_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.product_img {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.img__product{
+
+}
+
+.form-contact{
+  background-color: #ced5a0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 5rem;
+
+}
+
+.form-contact form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: .75rem;
+}
+
+.form-contact form input{
+  padding: .5rem;
+  border: 0;
+  outline: 0;
+  border-radius: 100vmax;
+  background-color:#97a676 ;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-contact p {
+  font-size: 13px;
+}
+
+.form-contact form input[type="submit"]{
+ cursor: pointer;
+ background-color: #ebd48a;
+}
+.form-contact form input[type="submit"]:hover{
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.8);
+  color: #f2f0ea;
+  transform: scale(1.1);
+}
+.registro{
+  background-color: #ebd48a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.registro h2{
+  margin-top: 2rem;
+}
+
+.registro form{
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: .5rem
+}
+.registro input{
+  padding: .5rem;
+  border-radius: 100vmax;
+  text-align: center;
+}
+
+.registro input[type="submit"]{
+  cursor: pointer;
+  background-color: #f4db03;
+  font-weight: 600;
+}
+
+
+/* ==== Footer ==== */
+footer{
+  background-color: #475640;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  padding-inline: 2rem;
+  padding-block: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer h3{
+  font-size: 14px;/* Ajusta esta altura según tu diseño */
+
+}
+
+footer a{
+  font-size: 12px;
+}
+.footer__logo img{
+  width: 20%;
+}
+.footer__information{
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+}
+.footer__information:hover,
+.footer__description:hover{
+  color: #dcd473;
+}
+
+.footer__social{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 1rem;
+}
+
+.footer__social i{
+  font-size: 20px;
+}
+
+.footer__description{
+  font-size: 13px;
+  color: #000;
+  font-weight: 600;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
+
+@media screen and (max-width: 576px){
+  
+}
+
+::-webkit-scrollbar {
+  background-color: rgb(163, 159, 159);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(110, 110, 110);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #575555;
+}

@@ -1,0 +1,133 @@
+
+main {
+  background-color: #e6e1d4;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  background-color: #ebd48a;
+  padding-block: 2rem;
+}
+.registro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+}
+.registro form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding-block: 2rem;
+}
+
+.registro form input {
+  padding: 0.5rem;
+  border-radius: 100vmax;
+  outline: 0;
+  text-align: center;
+}
+
+.registro form input[type="submit"]{
+  background-color: #f4db03;
+  font-weight: 600;
+}
+
+.registro form input[type="submit"]:hover{
+  transform: scale(1.1);
+  color: #fff;
+  opacity: .8;
+}
+
+/* ==== Footer ==== */
+/*
+footer {
+  background-color: #475640;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  padding-inline: 2rem;
+  padding-block: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+*/
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 150px;
+  background-color: #475640;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  padding-inline: 2rem;
+  padding-block: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+footer h3 {
+  font-size: 14px; /* Ajusta esta altura según tu diseño */
+}
+
+footer a {
+  font-size: 12px;
+}
+.footer__logo img {
+  width: 20%;
+}
+.footer__information {
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+}
+.footer__information:hover,
+.footer__description:hover {
+  color: #dcd473;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer__social i {
+  font-size: 20px;
+}
+
+.footer__description {
+  font-size: 13px;
+  color: #000;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  background-color: rgb(163, 159, 159);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(110, 110, 110);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #575555;
+}
