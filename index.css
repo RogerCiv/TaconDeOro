@@ -76,11 +76,12 @@ header {
   font-size: 1.5rem;
   font-weight: 600;
 }
-/*--- ----*/
+/*--- Display de los links del navbar----*/
 .navbar .links {
   display: flex;
   gap: 2rem;
 }
+/* --- Diseño del buscador del navbar --- */
 .navbar .links input{
   padding: .25rem;
   border-radius: 100vmax;
@@ -88,9 +89,7 @@ header {
   border: 0;
 
 }
-.navbar .links input:hover{
 
-}
 /* Aquí, estás proporcionando estilos para un botón de menú desplegable que se muestra en pantallas más pequeñas.*/
 .navbar .toggle_btn {
   color: #000;
@@ -110,17 +109,17 @@ header {
   font-weight: bold;
   cursor: pointer;
 }
-/* */
+/* Efecto cuando se pasa el ratón por el botón de registro */
 .action_btn:hover {
   scale: 1.05;
   color: #fff;
 }
-
+/*Cuando el usuario mantiene presionado el botón  se le cambia la escala.*/
 .action_btn:active {
   scale: 0.95;
 }
 /* DROPDOWN MENU */
-
+/*Menú Hamburguesa para cuando se cambia el tamaño de la pantalla*/
 .dropdown_menu {
   display: none;
   position: absolute;
@@ -135,6 +134,7 @@ header {
   /* Aplica una transición al menú desplegable para que se abra y se cierre suavemente */
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .dropdown_menu li {
   padding: 0.7rem;
   display: flex;
