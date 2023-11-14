@@ -18,22 +18,25 @@
     <!--==================== HEADER ====================-->
     <header>
       <nav class="navbar">
+        <!-- Logo y enlace de la tienda-->
         <div class="logo">
           <img src="img/logotipo.png" alt="">
         <a href="index.html">Tacón de Oro</a>
       </div>
+      <!--Links de la navbar para navegar por la tienda.-->
         <ul class="links">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="tienda.html">Tienda</a></li>
           <li><a href="#">Sobre Nosotros</a></li>
           <li><a href="#contact">Contacto</a></li>
+          <li>  <input type="text" placeholder="Buscador..."></li>
         </ul>
         <a href="registro.html" class="action_btn">Registro</a>
         <div class="toggle_btn">
           <i class="fa-solid fa-bars"></i>
         </div>
       </nav>
-
+      <!--DropMenu para hacer responsive el navbar, para que aparezca el menú de Hamburgesa-->
       <div class="dropdown_menu">
         <li><a href="#">Inicio</a></li>
         <li><a href="tienda.html">Tienda</a></li>
@@ -42,14 +45,18 @@
         <li><a href="#" class="action_btn">Registro</a></li>
       </div>
     </header>
-
+    <!--=======MAIN ========-->
     <main>
+      <!-- Section para la tienda-->
         <section class="shop">
+          <!-- Div que contiene el header de la tienda con productos-->
             <div class="shop__header">
+              <!--Formulario con el buscador de productos-->
                 <form action="">
                     <input type="text" placeholder="Buscador...">
                     <input type="submit" value="Buscar">
                 </form> 
+                <!-- lista con las categorias-->
                 <ul class="shop__list">
                     <li><a href="">All</a></li>
                     <li><a href="">Exclusivos</a></li>
@@ -57,7 +64,9 @@
                     <li><a href="">Hombres</a></li>
                 </ul>
             </div>
+            <!-- div contenedor de cada producto-->
                 <div class="product__list">
+                  <!-- Div comentado usado como referencia para crear el estilo css. Este div se crea dinamicamente en el scrip shop.js-->
                   <!-- Div product item ejemplo 
                     <div class="product__item">
                       <div class="img__product">
@@ -146,5 +155,6 @@
       </footer>
 
     <script src="main.js"></script>
+    <script src="shop.js"></script>
   </body>
 </html>
