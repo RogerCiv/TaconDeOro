@@ -93,8 +93,12 @@ header {
 }
 
 /* Aquí, estás proporcionando estilos para un botón de menú desplegable que se muestra en pantallas más pequeñas.*/
+.toggle_btn i{
+  margin: 1rem;
+}
 .navbar .toggle_btn {
   color: #000;
+  
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
@@ -128,7 +132,7 @@ header {
   right: 2rem;
   top: 60px;
   height: 0;
-  width: 300px;
+  width: 30%;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   border-radius: 10px;
@@ -319,7 +323,7 @@ footer a {
 
 /* RESPONSIVE */
 /*AJuste del navbar para tamaño maximo de 1150px*/
-@media (max-width: 1150px) {
+@media (max-width: 1167px) {
   .navbar .links,
   .navbar .action_btn {
     display: none;
@@ -333,11 +337,18 @@ footer a {
   }
 }
 /*Ajuste del menú hamburgesa como maximo de 576px*/
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .dropdown_menu {
     left: 2rem;
     width: unset;
   }
+
+}
+
+@media (max-width: 400px){
+ .products{
+  padding-inline: 1rem;
+ }
 }
 /*Para estilar la barra del navegador*/
 
